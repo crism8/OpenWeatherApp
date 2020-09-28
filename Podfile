@@ -8,6 +8,12 @@ target 'OpenWeatherApp' do
   # Pods for OpenWeatherApp
 
     pod 'SwiftLint', '~> 0.34'
+    pod 'Alamofire', '~> 5.2'
+
+    # Rx pods
+    pod 'RxSwift', '~> 5.0'
+    pod 'RxCocoa', '~> 5.0'
+    pod 'RxAlamofire', '~> 5.0'
 
 
   target 'OpenWeatherAppTests' do

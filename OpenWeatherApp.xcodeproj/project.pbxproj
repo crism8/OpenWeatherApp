@@ -11,6 +11,8 @@
 		4A090084C6A8692B2C3A38E9 /* Pods_OpenWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E635E31F1778B34795CCA7F /* Pods_OpenWeatherApp.framework */; };
 		527D25E8C3BF65CD8B29F3B2 /* Pods_OpenWeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F493793E269542323E729825 /* Pods_OpenWeatherAppTests.framework */; };
 		F3A081FC25228F58007EEB5D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F3A081FB25228F58007EEB5D /* .swiftlint.yml */; };
+		F3A0824725229D96007EEB5D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0824625229D95007EEB5D /* AppSettings.swift */; };
+		F3A0824C25229F08007EEB5D /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0824B25229F08007EEB5D /* ServiceLocator.swift */; };
 		F3E381A42522793700FD9E67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E381A32522793700FD9E67 /* AppDelegate.swift */; };
 		F3E381A82522793700FD9E67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E381A72522793700FD9E67 /* ViewController.swift */; };
 		F3E381AD2522793900FD9E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E381AC2522793900FD9E67 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		CFC0390330094DED2D94F9C8 /* Pods-OpenWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		E4699FA8534CDD5BFAC1F96C /* Pods-OpenWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A081FB25228F58007EEB5D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F3A0824625229D95007EEB5D /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		F3A0824B25229F08007EEB5D /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		F3E381A02522793700FD9E67 /* OpenWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E381A32522793700FD9E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3E381A72522793700FD9E67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		F3A0822A2522993B007EEB5D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F3A0824B25229F08007EEB5D /* ServiceLocator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E381A32522793700FD9E67 /* AppDelegate.swift */,
+				F3A0824625229D95007EEB5D /* AppSettings.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				F3E3819D2522793700FD9E67 /* Frameworks */,
 				F3E3819E2522793700FD9E67 /* Resources */,
 				F3A0822525229869007EEB5D /* ShellScript */,
+				3A653575C61AF8A70F8D3BBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +269,7 @@
 				F3E381BD2522793A00FD9E67 /* Sources */,
 				F3E381BE2522793A00FD9E67 /* Frameworks */,
 				F3E381BF2522793A00FD9E67 /* Resources */,
+				D853D10EC73056D8F7A8B466 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +351,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A653575C61AF8A70F8D3BBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D853D10EC73056D8F7A8B466 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp-OpenWeatherAppUITests/Pods-OpenWeatherApp-OpenWeatherAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp-OpenWeatherAppUITests/Pods-OpenWeatherApp-OpenWeatherAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenWeatherApp-OpenWeatherAppUITests/Pods-OpenWeatherApp-OpenWeatherAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8C776DA2CFE4B8EE3A98E62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,8 +475,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A0824C25229F08007EEB5D /* ServiceLocator.swift in Sources */,
 				F3E381A82522793700FD9E67 /* ViewController.swift in Sources */,
 				F3E381A42522793700FD9E67 /* AppDelegate.swift in Sources */,
+				F3A0824725229D96007EEB5D /* AppSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
