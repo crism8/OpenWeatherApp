@@ -1,0 +1,15 @@
+disabled_rules:
+ - trailing_whitespace
+ - line_length
+ 
+excluded:
+ - Pods
+  
+identifier_name:
+  max_length:
+    warning: 60
+    error: 90
+  excluded:
+   - id
+
+
