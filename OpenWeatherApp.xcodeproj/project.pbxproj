@@ -3,13 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1EB434EAAEA3EB0A40C8B461 /* Pods_OpenWeatherApp_OpenWeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427388E1AB45D6929853C453 /* Pods_OpenWeatherApp_OpenWeatherAppUITests.framework */; };
 		4A090084C6A8692B2C3A38E9 /* Pods_OpenWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E635E31F1778B34795CCA7F /* Pods_OpenWeatherApp.framework */; };
 		527D25E8C3BF65CD8B29F3B2 /* Pods_OpenWeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F493793E269542323E729825 /* Pods_OpenWeatherAppTests.framework */; };
+		784308842523EFCE00992378 /* ApiRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308832523EFCE00992378 /* ApiRequestParameters.swift */; };
+		784308892523F05800992378 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308882523F05800992378 /* URLBuilder.swift */; };
+		7843088E2523F0A700992378 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843088D2523F0A700992378 /* BaseApiClient.swift */; };
+		784308932523F13C00992378 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308922523F13C00992378 /* Logger.swift */; };
+		784308982523F18900992378 /* Array+Append.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308972523F18900992378 /* Array+Append.swift */; };
+		7843089D2523F1C800992378 /* ApiDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843089C2523F1C800992378 /* ApiDataMapper.swift */; };
+		784308A22523F20000992378 /* ObservableType+DoOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308A12523F20000992378 /* ObservableType+DoOnce.swift */; };
+		784308A72523F29600992378 /* ApiErrorContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308A62523F29600992378 /* ApiErrorContainer.swift */; };
+		784308AC2523F2AC00992378 /* ApiErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308AB2523F2AC00992378 /* ApiErrors.swift */; };
+		784308B12523F2DA00992378 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784308B02523F2DA00992378 /* String+Localized.swift */; };
+		784308BF2523F60500992378 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 784308BE2523F60500992378 /* Localizable.strings */; };
 		F3A081FC25228F58007EEB5D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F3A081FB25228F58007EEB5D /* .swiftlint.yml */; };
 		F3A0824725229D96007EEB5D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0824625229D95007EEB5D /* AppSettings.swift */; };
 		F3A0824C25229F08007EEB5D /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0824B25229F08007EEB5D /* ServiceLocator.swift */; };
@@ -43,6 +54,17 @@
 		1102FCE161F2865A7A9BDBDC /* Pods-OpenWeatherApp-OpenWeatherAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp-OpenWeatherAppUITests.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp-OpenWeatherAppUITests/Pods-OpenWeatherApp-OpenWeatherAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		427388E1AB45D6929853C453 /* Pods_OpenWeatherApp_OpenWeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherApp_OpenWeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BF54888A304D309908AC3B /* Pods-OpenWeatherApp-OpenWeatherAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp-OpenWeatherAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp-OpenWeatherAppUITests/Pods-OpenWeatherApp-OpenWeatherAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		784308832523EFCE00992378 /* ApiRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestParameters.swift; sourceTree = "<group>"; };
+		784308882523F05800992378 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		7843088D2523F0A700992378 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		784308922523F13C00992378 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = OpenWeatherApp/Services/Logger.swift; sourceTree = SOURCE_ROOT; };
+		784308972523F18900992378 /* Array+Append.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Append.swift"; path = "OpenWeatherApp/Services/Array+Append.swift"; sourceTree = SOURCE_ROOT; };
+		7843089C2523F1C800992378 /* ApiDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataMapper.swift; sourceTree = "<group>"; };
+		784308A12523F20000992378 /* ObservableType+DoOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ObservableType+DoOnce.swift"; path = "OpenWeatherApp/Services/ObservableType+DoOnce.swift"; sourceTree = SOURCE_ROOT; };
+		784308A62523F29600992378 /* ApiErrorContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorContainer.swift; sourceTree = "<group>"; };
+		784308AB2523F2AC00992378 /* ApiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrors.swift; sourceTree = "<group>"; };
+		784308B02523F2DA00992378 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Localized.swift"; path = "OpenWeatherApp/Services/String+Localized.swift"; sourceTree = SOURCE_ROOT; };
+		784308BE2523F60500992378 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C48FC55E964AED03CBD141CC /* Pods-OpenWeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherAppTests/Pods-OpenWeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFC0390330094DED2D94F9C8 /* Pods-OpenWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		E4699FA8534CDD5BFAC1F96C /* Pods-OpenWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-OpenWeatherApp/Pods-OpenWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				F3A0824B25229F08007EEB5D /* ServiceLocator.swift */,
+				784308832523EFCE00992378 /* ApiRequestParameters.swift */,
+				784308882523F05800992378 /* URLBuilder.swift */,
+				7843088D2523F0A700992378 /* BaseApiClient.swift */,
+				7843089C2523F1C800992378 /* ApiDataMapper.swift */,
+				784308A62523F29600992378 /* ApiErrorContainer.swift */,
+				784308AB2523F2AC00992378 /* ApiErrors.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -138,6 +166,7 @@
 			children = (
 				F3E381AC2522793900FD9E67 /* Assets.xcassets */,
 				F3E381B12522793900FD9E67 /* Info.plist */,
+				784308BE2523F60500992378 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -145,6 +174,9 @@
 		F3A0822C25229956007EEB5D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				784308972523F18900992378 /* Array+Append.swift */,
+				784308A12523F20000992378 /* ObservableType+DoOnce.swift */,
+				784308B02523F2DA00992378 /* String+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +193,7 @@
 		F3A0822E2522996E007EEB5D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				784308922523F13C00992378 /* Logger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -329,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A081FC25228F58007EEB5D /* .swiftlint.yml in Resources */,
+				784308BF2523F60500992378 /* Localizable.strings in Resources */,
 				F3E381B02522793900FD9E67 /* LaunchScreen.storyboard in Resources */,
 				F3E381AD2522793900FD9E67 /* Assets.xcassets in Resources */,
 			);
@@ -475,10 +509,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7843088E2523F0A700992378 /* BaseApiClient.swift in Sources */,
 				F3A0824C25229F08007EEB5D /* ServiceLocator.swift in Sources */,
+				784308A22523F20000992378 /* ObservableType+DoOnce.swift in Sources */,
 				F3E381A82522793700FD9E67 /* ViewController.swift in Sources */,
+				784308B12523F2DA00992378 /* String+Localized.swift in Sources */,
+				7843089D2523F1C800992378 /* ApiDataMapper.swift in Sources */,
+				784308A72523F29600992378 /* ApiErrorContainer.swift in Sources */,
+				784308842523EFCE00992378 /* ApiRequestParameters.swift in Sources */,
 				F3E381A42522793700FD9E67 /* AppDelegate.swift in Sources */,
+				784308982523F18900992378 /* Array+Append.swift in Sources */,
 				F3A0824725229D96007EEB5D /* AppSettings.swift in Sources */,
+				784308892523F05800992378 /* URLBuilder.swift in Sources */,
+				784308AC2523F2AC00992378 /* ApiErrors.swift in Sources */,
+				784308932523F13C00992378 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

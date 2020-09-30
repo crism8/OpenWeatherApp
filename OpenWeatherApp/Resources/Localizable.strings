@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  OpenWeatherApp
+
+  Created by Cristian Makarski on 30/09/2020.
+  
+*/
+
+//Errors
+"error_connection" = "Connection error";
+"error_validation" = "Connection error or invalid data";
+"error_api_key" = "Insert your apiKey in:\nApp -> AppSettings -> key\n\nYou can get it from here:\nhttps://openweathermap.org";
