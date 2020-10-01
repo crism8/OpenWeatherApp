@@ -26,7 +26,7 @@ class BaseApiClient: NSObject {
     }
     
     var apiVersion: String? {
-        return "v1"
+        return "2.5"
     }
     
     func createSession() -> Session {
