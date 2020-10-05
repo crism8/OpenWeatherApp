@@ -5,8 +5,23 @@
   Created by Cristian Makarski on 30/09/2020.
   
 */
+//State views
+"loading_title" = "Loading..";
+"error_title" = "Connection error";
+"error_refresh_button_title" = "No results. Press to clear.";
+"empty_title" = "No city found :(";
+
+//currentWeatherViewController
+"bar_title" = "Weather";
+"search_bar_placeholder" = "Search city";
+
+//Message prompt
+"msg_ok" = "OK";
+"msg_error_title" = "Error";
 
 //Errors
+"error_general" = "Sorry an error has occured";
 "error_connection" = "Connection error";
 "error_validation" = "Connection error or invalid data";
+"error_parse" = "Parse error";
 "error_api_key" = "Insert your apiKey in:\nApp -> AppSettings -> key\n\nYou can get it from here:\nhttps://openweathermap.org";

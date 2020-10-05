@@ -46,7 +46,6 @@ class OpenWeatherAppTests: XCTestCase {
         XCTAssertTrue(currentWeather.main.tempereture < 30)
         XCTAssertTrue(currentWeather.main.minTemperature < 30)
         XCTAssertTrue(currentWeather.main.maxTemperature < 30)
-        XCTAssertTrue(currentWeather.main.maxTemperature < 30)
 
     }
 

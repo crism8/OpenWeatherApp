@@ -9,12 +9,14 @@ target 'OpenWeatherApp' do
 
     pod 'SwiftLint', '~> 0.34'
     pod 'Alamofire', '~> 5.2'
+    pod 'SnapKit', '~> 5.0.0'
+    pod 'Kingfisher', '~> 5.0'
 
     # Rx pods
     pod 'RxSwift', '~> 5.0'
     pod 'RxCocoa', '~> 5.0'
     pod 'RxAlamofire', '~> 5.0'
-
+    pod 'RxCoreLocation', '~> 1.4'
 
   target 'OpenWeatherAppTests' do
     inherit! :search_paths

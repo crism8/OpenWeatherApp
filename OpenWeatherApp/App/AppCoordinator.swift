@@ -6,52 +6,24 @@
 //
 import UIKit
 
-protocol SceneBuilderProtocol {
-    func createScene(withServiceLocator serviceLocator: ServiceLocator) -> UIViewController
-}
-
-final class AppCoordinator {
-    // MARK: Variables
-    static let shared = {
-        return AppCoordinator()
-    }()
+final class AppCoordinator: BaseAppCoordinator {
     
-    private let servicesLocator: ServiceLocator
-    private var window: UIWindow?
-    
-    // MARK: Initialization
-    private init() {
-        servicesLocator = ServiceLocator()
-        registerServices()
-    }
-
-    private func registerServices() {
-        servicesLocator.register(withBuilder: OpenWeatherClientServiceBuilder())
-    }
-    
-    // MARK: Initialize first scene
-    func initializeScene() {
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        createMainScene()
-    }
-    
-    private func createMainScene() {
+    override func setWindowRootViewController() {
         guard let window = window else {
             return
         }
         window.rootViewController = createMainNavigationController()
     }
-
+ 
+    override func registerViewControllers(builder: ScenesViewControllerBuilder) {
+        builder.register(viewControllerType: CurrentWeatherViewController.self, forType: .currentWeather)
+    }
+    
     private func createMainNavigationController() -> UINavigationController {
-        let mainNavigationController = UINavigationController(rootViewController: createMainSceneViewController())
-        mainNavigationController.navigationBar.tintColor = UIColor.white
+        let mainSceneViewController = createMainSceneViewController()
+        let mainNavigationController = UINavigationController(rootViewController: mainSceneViewController)
+        mainNavigationController.navigationBar.tintColor = UIColor.black
         mainNavigationController.navigationBar.backgroundColor = UIColor.white
         return mainNavigationController
     }
-
-    private func createMainSceneViewController() -> UIViewController {
-        return UIViewController()
-    }
-
 }
