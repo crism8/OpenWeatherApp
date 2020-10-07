@@ -10,5 +10,5 @@ import RxSwift
 
 protocol OpenWeatherClientServiceProtocol: NSObjectProtocol {
     func currentWeather(forCity name: String) -> Observable<(HTTPURLResponse, WeatherModel?)>
-
+    func currentWeather(longitude: Float, latitude: Float) -> Observable<(HTTPURLResponse, WeatherModel?)>
 }

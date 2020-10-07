@@ -63,9 +63,10 @@ final class CurrentWeatherViewController: BaseViewController<CurrentWeatherViewM
     
     private func bindSearchController() {
         Driver<Void>.merge([
-//            searchController.searchBar.rx.searchButtonClicked.asDriver(),
+            searchController.searchBar.rx.searchButtonClicked.asDriver(),
             searchController.searchBar.rx.text.asDriver(onErrorJustReturn: nil).map({ _ in () })
         ])
+        .skip(1)
         .debounce(.milliseconds(500))
         .drive(onNext: { [weak self] _ in
             guard let self = self, let text = self.searchController.searchBar.text else {
@@ -85,9 +86,11 @@ final class CurrentWeatherViewController: BaseViewController<CurrentWeatherViewM
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !viewModel.isApiKeyValid {
+        guard viewModel.isApiKeyValid else {
             showError(message: "error_api_key".localized)
+            return
         }
+        viewModel.locationWeather()
     }
 
 }

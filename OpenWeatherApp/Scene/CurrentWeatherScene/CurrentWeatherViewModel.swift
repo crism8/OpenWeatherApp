@@ -14,6 +14,8 @@ public protocol CurrentWeatherViewModelProtocol: ViewModelProtocol {
     var currentWeather: WeatherModel { get }
 
     func weather(forPlace place: String)
+    func locationWeather()
+
 }
 
 final class CurrentWeatherViewModel: BaseViewModel {
@@ -43,6 +45,10 @@ extension CurrentWeatherViewModel: CurrentWeatherViewModelProtocol {
     
     func weather(forPlace place: String) {
         currentWeatherUseCase.currentWeather(forPlace: place)
+    }
+    
+    func locationWeather() {
+        currentWeatherUseCase.locationWeather()
     }
     
 }

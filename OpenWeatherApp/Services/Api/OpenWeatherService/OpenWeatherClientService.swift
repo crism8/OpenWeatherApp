@@ -26,6 +26,10 @@ final class OpenWeatherClientService: OpenWeatherClient {
 
 // MARK: AccuweatherClientServiceProtocol
 extension OpenWeatherClientService: OpenWeatherClientServiceProtocol {
+    func currentWeather(longitude: Float, latitude: Float) -> Observable<(HTTPURLResponse, WeatherModel?)> {
+        return responseMapped(parameters: parametersForCurrentWeather(longitude: longitude, latitude: latitude))
+    }
+    
     func currentWeather(forCity name: String) -> Observable<(HTTPURLResponse, WeatherModel?)> {
         return responseMapped(parameters: parametersForCurrentWeather(cityName: name))
     }

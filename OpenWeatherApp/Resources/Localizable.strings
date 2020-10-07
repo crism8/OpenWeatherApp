@@ -25,3 +25,4 @@
 "error_validation" = "Connection error or invalid data";
 "error_parse" = "Parse error";
 "error_api_key" = "Insert your apiKey in:\nApp -> AppSettings -> key\n\nYou can get it from here:\nhttps://openweathermap.org";
+"error_location" = "Location error";
